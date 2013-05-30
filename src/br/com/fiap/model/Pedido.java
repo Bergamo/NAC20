@@ -1,14 +1,14 @@
-package br.com.java.Pedido;
+package br.com.fiap.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.sql.Date;
 import java.util.List;
 
-import br.com.fiap.Cliente.Cliente;
-import br.com.fiap.Produto.ItemPedido;
 
-public class Pedido {
+public class Pedido implements Serializable {
 	
+	private static final long serialVersionUID = 1L;
 	private long id;
 	private Date dataEmissao;
 	private Date dataProcessamento;
@@ -52,6 +52,4 @@ public class Pedido {
 	public void setItemPedido(List<ItemPedido> itemPedido) {
 		this.itemPedido = itemPedido;
 	}
-
-	
 }

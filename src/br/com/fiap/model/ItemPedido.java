@@ -1,9 +1,11 @@
-package br.com.fiap.Produto;
+package br.com.fiap.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class ItemPedido {
+public class ItemPedido implements Serializable{
 
+	private static final long serialVersionUID = 1L;
 	private int quantidade;
 	private BigDecimal precoUnitario;
 	private BigDecimal totalDoItem;
@@ -40,5 +42,4 @@ public class ItemPedido {
 	public void setProduto(Produto produto) {
 		this.produto = produto;
 	}	
-	
 }
